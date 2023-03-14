@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as D from './data'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const children = D.makeArray(10).map((notUesed, index) => (
+    <div key={index}>
+      <p>{D.randomId()}</p>
+      <p>{D.randomName()}</p>
+      <p>{D.randomJobTitle()}</p>
+      <p>{D.randomSentence()}</p>
+      <img src={D.randomAvatar()} width={100} height={100}></img>
     </div>
-  );
+  ))
+
+  return <div>{children}</div>
+
+  // return (
+  //   <div>
+  //     <p>
+  //       {D.randomName()}, {D.randomJobTitle()}, {D.randomDayMonthYear()}
+  //     </p>
+  //     <img src={D.randomAvatar()} height="50" />
+  //     <img src={D.randomImage()} height="300" />
+  //   </div>
+  // )
 }
 
-export default App;
+export default App
