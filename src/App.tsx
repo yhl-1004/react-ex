@@ -10,6 +10,7 @@ import {Icon} from './components'
 import './App.css'
 import Color from './pages/Color'
 import DivTest from './pages/DivTest'
+import PositionTest from './pages/PositionTest'
 
 const App = () => {
   const texts = ['hello', 'world'].map((text, index) => (
@@ -24,8 +25,9 @@ const App = () => {
       <FileInput />
       <FileDrop />
       <Icon name="home" className="text-red" /> */}
-      <Color />
-      <DivTest />
+      {/* <Color /> */}
+      {/* <DivTest /> */}
+      <PositionTest />
     </ul>
   )
 }
