@@ -1,22 +1,36 @@
 import React, {Component} from 'react'
 import * as D from './data'
+import ClassComponent from './ClassComponent'
+import ArrowComponent from './ArrowComponent'
+import KeyComponent from './KeyComponent'
+import FileInput from './FileInput'
+import ChildrenComponent from './ChildrenComponent'
+import FileDrop from './FileDrop'
+import {Icon} from './components'
+import './App.css'
+import Color from './pages/Color'
+import DivTest from './pages/DivTest'
 
-export default class App extends Component{
-  render() {
-    const isLoading = false
-    const children = isLoading?<p>loading...</p>
-      :<ul>
-        <li>
-          <a href='http://www.google.com'>
-            <p>go to Google</p>
-          </a>
-        </li>
-      </ul>
-    return(
-      <div>{children}</div>
-    )
-  }
+const App = () => {
+  const texts = ['hello', 'world'].map((text, index) => (
+    <ChildrenComponent key={index} children={text} />
+  ))
+  return (
+    <ul>
+      {/* <ClassComponent href="http://www.google.com" text="go to Google" />
+      <ArrowComponent href="http://www.twitter.com" text="go to Twitter" />
+      <KeyComponent />
+      <div children={texts}></div>
+      <FileInput />
+      <FileDrop />
+      <Icon name="home" className="text-red" /> */}
+      <Color />
+      <DivTest />
+    </ul>
+  )
 }
+
+export default App
 
 // function App() {
 //   const children = D.makeArray(10).map((notUesed, index) => (
@@ -31,15 +45,15 @@ export default class App extends Component{
 
 //   return <div>{children}</div>
 
-  // return (
-  //   <div>
-  //     <p>
-  //       {D.randomName()}, {D.randomJobTitle()}, {D.randomDayMonthYear()}
-  //     </p>
-  //     <img src={D.randomAvatar()} height="50" />
-  //     <img src={D.randomImage()} height="300" />
-  //   </div>
-  // )
+// return (
+//   <div>
+//     <p>
+//       {D.randomName()}, {D.randomJobTitle()}, {D.randomDayMonthYear()}
+//     </p>
+//     <img src={D.randomAvatar()} height="50" />
+//     <img src={D.randomImage()} height="300" />
+//   </div>
+// )
 // }
 
 // export default App
