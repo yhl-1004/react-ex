@@ -14,6 +14,8 @@ import PositionTest from './pages/PositionTest'
 import MinMaxTest from './pages/MinMaxWidthHeight'
 import AlignTest from './pages/AlignTest'
 import UserContainer from './pages/UserContainer'
+import CardContainer from './pages/CardContainer'
+import ButtonTest from './pages/ButtonTest'
 
 const App = () => {
   const texts = ['hello', 'world'].map((text, index) => (
@@ -33,7 +35,9 @@ const App = () => {
       {/* <PositionTest /> */}
       {/* <MinMaxTest /> */}
       {/* <AlignTest /> */}
-      <UserContainer />
+      {/* <UserContainer /> */}
+      {/* <CardContainer /> */}
+      <ButtonTest />
     </ul>
   )
 }
