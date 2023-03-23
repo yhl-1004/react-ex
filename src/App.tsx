@@ -11,6 +11,9 @@ import './App.css'
 import Color from './pages/Color'
 import DivTest from './pages/DivTest'
 import PositionTest from './pages/PositionTest'
+import MinMaxTest from './pages/MinMaxWidthHeight'
+import AlignTest from './pages/AlignTest'
+import UserContainer from './pages/UserContainer'
 
 const App = () => {
   const texts = ['hello', 'world'].map((text, index) => (
@@ -27,7 +30,10 @@ const App = () => {
       <Icon name="home" className="text-red" /> */}
       {/* <Color /> */}
       {/* <DivTest /> */}
-      <PositionTest />
+      {/* <PositionTest /> */}
+      {/* <MinMaxTest /> */}
+      {/* <AlignTest /> */}
+      <UserContainer />
     </ul>
   )
 }
