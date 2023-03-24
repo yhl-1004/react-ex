@@ -16,6 +16,7 @@ import AlignTest from './pages/AlignTest'
 import UserContainer from './pages/UserContainer'
 import CardContainer from './pages/CardContainer'
 import ButtonTest from './pages/ButtonTest'
+import InputTest from './pages/InputTest'
 
 const App = () => {
   const texts = ['hello', 'world'].map((text, index) => (
@@ -37,7 +38,8 @@ const App = () => {
       {/* <AlignTest /> */}
       {/* <UserContainer /> */}
       {/* <CardContainer /> */}
-      <ButtonTest />
+      {/* <ButtonTest /> */}
+      <InputTest />
     </ul>
   )
 }
