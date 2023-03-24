@@ -1,4 +1,6 @@
 import Basic from './Basic'
+import Size from './Size'
+import IconTest from './IconTest'
 
 export default function ButtonTest() {
   return (
@@ -6,6 +8,8 @@ export default function ButtonTest() {
       <h2 className="font-bold text-5xl text-center">ButtonTest</h2>
       <div className="mt-4">
         <Basic />
+        <Size />
+        <IconTest />
       </div>
     </section>
   )
