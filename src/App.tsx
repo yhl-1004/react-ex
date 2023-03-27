@@ -21,6 +21,8 @@ import ModalTest from './pages/ModalTest'
 import Clock from './pages/Clock'
 import {useEffect, useState} from 'react'
 import {useClock} from './hooks'
+import CreateOrUseTest from './pages/UseOrCreateTest'
+import Momo from './pages/Memo'
 
 export default function App() {
   // const [today, setToday] = useState(new Date())
@@ -34,7 +36,9 @@ export default function App() {
   // return <Clock today={today} />
 
   const today = useClock()
-  return <Clock today={today} />
+  // return <Clock today={today} />
+  // return <CreateOrUseTest />
+  return <Momo />
 }
 
 // export default function App() {
