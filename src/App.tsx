@@ -23,6 +23,9 @@ import {useEffect, useState} from 'react'
 import {useClock} from './hooks'
 import CreateOrUseTest from './pages/UseOrCreateTest'
 import Momo from './pages/Memo'
+import Callback from './pages/Callback'
+import HighOrderCallback from './pages/HighOrderCallback'
+import ClassLifecycle from './pages/ClassLifecycle'
 
 export default function App() {
   // const [today, setToday] = useState(new Date())
@@ -38,7 +41,10 @@ export default function App() {
   const today = useClock()
   // return <Clock today={today} />
   // return <CreateOrUseTest />
-  return <Momo />
+  // return <Momo />
+  // return <Callback />
+  // return <HighOrderCallback />
+  return <ClassLifecycle />
 }
 
 // export default function App() {
