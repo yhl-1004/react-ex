@@ -26,6 +26,13 @@ import Momo from './pages/Memo'
 import Callback from './pages/Callback'
 import HighOrderCallback from './pages/HighOrderCallback'
 import ClassLifecycle from './pages/ClassLifecycle'
+import Responsive from './pages/Responsive/Responsive'
+import ReduxClock from './pages/ReduxClock'
+import UseReducerClock from './pages/UseReducerClock'
+import {Provider as ReduxProvider, useSelector} from 'react-redux'
+import type {Action} from 'redux'
+import {configureStore} from '@reduxjs/toolkit'
+import {useStore} from './store'
 
 export default function App() {
   // const [today, setToday] = useState(new Date())
@@ -38,13 +45,26 @@ export default function App() {
   // }, [])
   // return <Clock today={today} />
 
-  const today = useClock()
+  // const today = useClock()
   // return <Clock today={today} />
   // return <CreateOrUseTest />
   // return <Momo />
   // return <Callback />
   // return <HighOrderCallback />
-  return <ClassLifecycle />
+  // return <ClassLifecycle />
+
+  // return <Responsive />
+
+  const store = useStore()
+
+  return (
+    <ReduxProvider store={store}>
+      <main className="p-8">
+        <UseReducerClock />
+        <ReduxClock />
+      </main>
+    </ReduxProvider>
+  )
 }
 
 // export default function App() {
